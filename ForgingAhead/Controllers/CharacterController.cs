@@ -23,7 +23,7 @@ namespace ForgingAhead.Controllers
             _context.Characters.Add(character);
             _context.SaveChanges();
 
-            return RedirectToAction('index');
+            return RedirectToAction("Index");
         }
     }
 }
