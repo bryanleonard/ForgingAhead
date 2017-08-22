@@ -12,7 +12,8 @@ namespace ForgingAhead.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = _context.Characters.Where(e => e.isActive).ToList();
+            return View(model);
         }
 
         public IActionResult About()

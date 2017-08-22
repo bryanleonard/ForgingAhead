@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ForgingAhead</title>
+    <title>@ViewData["Title"] - Forging Ahead</title>
+    @RenderSection("header", required: false)
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -57,6 +58,10 @@
                 crossorigin="anonymous"
                 integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
         </script>
+<!--
+Add jquery-validate amd jquery-validation-unobtrusive scripts to implement FE validation
+Then add <div asp-validation-summary="All"></div>> to the respective view
+-->
         <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"

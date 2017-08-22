@@ -15,4 +15,34 @@
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Character\" />
+    <Folder Include="Views\Partials\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Views\Partials\_CharacterSheet.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>_CharacterSheet.cs</LastGenOutput>
+    </None>
+    <None Update="Views\Character\Edit.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>Edit.cs</LastGenOutput>
+    </None>
+    <None Update="Views\Shared\EditorTemplate\Template.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>Template.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Partials\_CharacterSheet.cs">
+      <DependentUpon>_CharacterSheet.cshtml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Character\Edit.cs">
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Shared\EditorTemplate\Template.cs">
+      <DependentUpon>String.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

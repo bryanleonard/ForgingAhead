@@ -1,0 +1,10 @@
+﻿@model ForgingAhead.Models.Character
+
+<h2>Edit Character</h2>
+
+<form asp-controller="Character" asp-action="Update">
+    @Html.EditorForModel() 
+<!-- creates labels and inputs from everything as layed out in the model -->
+
+   <input type="submit" value="Update">
+</form>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace ForgingAhead
 {
@@ -14,6 +15,14 @@ namespace ForgingAhead
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+        }
+
+        // need to add this to most projects manually
+        public void ConfigurationServices(IServiceCollection services) 
+        {
+            services.AddEntityFramework()
+                .AddDbContext<Models.ApplicationDbContext>();
+            services.AddMvc();
         }
 
         public IConfiguration Configuration { get; }
